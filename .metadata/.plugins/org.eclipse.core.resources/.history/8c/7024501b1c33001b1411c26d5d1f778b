@@ -1,0 +1,4 @@
+
+public enum Symbols {
+	"\u25cf"
+}

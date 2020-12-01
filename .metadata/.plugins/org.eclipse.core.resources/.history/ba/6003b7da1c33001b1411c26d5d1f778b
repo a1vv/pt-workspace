@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class ConnectFour {
+	public static void main(String args[]) {
+		System.out.print("\u25cb");
+		System.out.print(" ");
+		System.out.print("\u25cf");
+		System.out.print(" ");
+		System.out.println("\u25cb");
+		System.out.print("\u25cb");
+		System.out.print(" ");
+		System.out.print("\u25cf");
+		System.out.print(" ");
+		System.out.print("\u25cf");
+		System.out.print(" ");
+		System.out.println("\u25cb");
+	}
+}

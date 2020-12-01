@@ -1,0 +1,25 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Soduko {
+	private String[][] numbers;
+	private static Random rand = new Random();
+	
+	public static void main(String args[]) {
+		Soduko sod = new Soduko();
+		sod.printSoduko();
+	}
+	public void printSoduko() {
+		System.out.print(numbers);
+	}
+	
+	public static void buildSoduko() {
+		int ones = 2;
+		int twos = 2;
+		int threes = 2;
+		int fours = 2;
+		int guides = rand.nextInt(3) + 4;
+		for()
+	}
+	
+}
