@@ -14,7 +14,6 @@ public class Game {
 		scan = new Scanner(System.in);
 	}
 
-	// new game setup
 	public void setup() {
 		print("C O N N E C T   F O U R");
 		// ask for player names and create player objects
@@ -30,7 +29,6 @@ public class Game {
 		start();
 	}
 	
-	// start game
 	public void start() {
 		tiles = new Tiles();
 		while (true) {
@@ -60,13 +58,12 @@ public class Game {
 		print("Play again? y/n");
 		start();
 	}
-	
-	// handles player turns
+
 	private void turn() {
 		print(currentPlayer.name() + "'s turn (" + currentPlayer.symbol() + "), pick a column.");
 		columnChoice = scan.nextInt();
 		if (columnChoice >= 1 && columnChoice <= 9) {
-			if (!tiles.placeTile(currentPlayer, columnChoice)) {
+			if (tiles.placeTile(currentPlayer, columnChoice)) {
 				print("This column is already full! Pick another.");
 				turn();
 			}
@@ -78,16 +75,16 @@ public class Game {
 
 	private boolean isGameOver() {
 		if(tiles.gameOverCheck(currentPlayer)) {
-			printBoard();
+			for (int i = 0 ; i < 10 ; i++) {print("");}
 			print("Game Over! " + currentPlayer.name() + " won!");
 			return true;
 		} else {
 			return false;
 		}
 	}
-	
-	// prints the game board
+
 	private void printBoard() {
+		//print("1 2 3 4 5 6 7 8 9");
 		for (int i = 0; i < 9; i++) {
 			for (int j = 0; j < 9; j++) {
 				System.out.print(tiles.board()[8 - i][j] + "\u0020");
@@ -95,6 +92,7 @@ public class Game {
 			print("");
 		}
 		print("1 2 3 4 5 6 7 8 9");
+		//print("\uff11\u0020\uff12\u0020\uff13\u0020\uff14\u0020\uff15\u0020\uff16\u0020\uff17\u0020\uff18\u0020\uff19");
 	}
 
 	private void nextPlayer() {

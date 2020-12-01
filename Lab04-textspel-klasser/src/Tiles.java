@@ -1,28 +1,28 @@
 // handles gamedata
 public class Tiles {
-	private String[][] board = new String[9][9];
-	private int[] lastTop = new int[9];
-	private int lastCol;
+	private String[][] board = new String[9][9]; //playing board
+	private int[] lastTop = new int[9]; // height of the latest placed tile, each column has it's own value
+	private int lastCol; // column of the latest placed tile
 
 	public Tiles() {
 		for (int i = 0; i < 9; i++) {
-			lastTop[i] = -1; // blir sedan satt till 0 (rad 1) när första har placerats
+			lastTop[i] = -1; // no tiles have been placed yet, gets incremented with every placement
 			for (int j = 0; j < 9; j++) {
 				board[i][j] = " ";
 			}
 		}
 	}
 
-	// changes the board data, returns **true** if the selected column **is full**.
+	// changes the board data when a player places a tile
 	public boolean placeTile(Player p, int column) {
 		column -= 1;
 		if (lastTop[column] > 8) {
-			return true;
+			return false;
 		} else {
 			lastTop[column]++;
 			board[lastTop[column]][column] = p.symbol();
 			lastCol = column;
-			return false;
+			return true;
 		}
 	}
 
@@ -116,102 +116,6 @@ public class Tiles {
 		}
 		return win;
 	}
-
-	// fortfarande problem med out of bounds! Exception när man är
-	// för nära kanterna och ett av värdena som kollas är utanför
-//	private boolean diagonalCheck(Player p, boolean inverted) {
-//		int count = 1;
-//		int inv = 1;
-//		// if inverted - checks the other diagonal
-//		if (inverted) {
-//			inv = -1;
-//		}
-//		boolean up = true;
-//		boolean down = true;
-//		boolean win = false;
-//		try {
-//			String chosen = board[lastTop[lastCol]][lastCol];
-//			String upper;
-//			String downer;
-//			for (int i = 1; i < 9; i++) {
-//				upper = board[lastTop[lastCol] + i][lastCol + i * inv];
-//				if (chosen.equals(upper)) {
-//					count++;
-//				} else {
-//					up = false;
-//				}
-//				downer = board[lastTop[lastCol] - i][lastCol - i * inv];
-//				if (chosen.equals(downer)) {
-//					count++;
-//				} else {
-//					down = false;
-//				}
-//				if (count == 4) {
-//					win = true;
-//					p.win();
-//					break;
-//				}
-//				if (!up && !down) {
-//					win = false;
-//					break;
-//				}
-//			}
-//		} catch (Exception e) {
-//			if (count == 4) {
-//				win = true;
-//				p.win();
-//			}
-//		}
-//		return win;
-//	}
-
-
-//	private boolean diagonalCheck(Player p) {
-//		int count = 0;
-//		for (int i = 0; i < 9; i++) {
-//			for (int j = 0; j < 9; j++) {
-//				try {
-//					if(board[i+j][j].equals(p.symbol())) {
-//					count++;
-//					if (count == 4) {
-//						p.win();
-//						return true;
-//					}
-//				} else {
-//					count = 0;
-//				}
-//				}
-//				catch(Exception e) {
-//					
-//				}
-//			} 
-//		}
-//		return false;
-//	}
-//
-//	private boolean diagonalBackCheck(Player p) {
-//		int count = 0;
-//		for (int i = 8; i > 0; i++) {
-//			for (int j = 0; j < 9; j++) {
-//				try {
-//					if (board[i + j][j].equals(p.symbol())) {
-//						count++;
-//						if (count == 4) {
-//							p.win();
-//							return true;
-//						}
-//					} else {
-//						count = 0;
-//					}
-//				}
-//				catch(Exception e) {
-//					
-//				}
-//				
-//			}
-//		}
-//		return false;
-//	}
 
 	public String[][] board() {
 		return this.board;

@@ -1,4 +1,4 @@
-// keep track of player scores and names
+
 public class Player {
 	private String symbol;
 	private String name;
