@@ -92,7 +92,6 @@ public class Game {
 		for (int i = 1 ; i <= bS ; i++) { // indicators at top
 			print("*" + " ");
 		}
-		println(""); //line break
 		for (int i = 0; i < bS; i++) {
 			for (int j = 0; j < bS; j++) {
 				print(tiles.board()[bS - 1 - i][j] + "\u0020"); // u0020 = blankspace

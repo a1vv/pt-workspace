@@ -28,9 +28,9 @@ public class Tiles {
 
 	// changes the board data when a player places a tile
 	public boolean placeTile(Player p, int column) {
-		column -= 1; //user input is 1 higher than real number
-		if (lastTop[column] >= boardSize-1) { //index = boardSize-1 (ex boardSize 9 => lastTop[boardSize]: 0,1,2,..,7,8)
-			return false; //column is full
+		column -= 1;
+		if (lastTop[column] > boardSize-1) {
+			return false;
 		} else {
 			lastTop[column]++;
 			board[lastTop[column]][column] = p.symbol();

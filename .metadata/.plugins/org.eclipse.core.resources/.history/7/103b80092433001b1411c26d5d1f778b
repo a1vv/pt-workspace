@@ -1,6 +1,0 @@
-
-public class Tiles {
-	public static void placeTile(Player p) {
-		
-	}
-}

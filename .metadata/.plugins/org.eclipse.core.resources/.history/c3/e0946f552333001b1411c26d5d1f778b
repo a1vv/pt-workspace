@@ -1,9 +1,0 @@
-
-public class Tiles {
-	private String p1 = "\u25cf";
-	private String p2 = "\u25cb";
-	
-	public static void placeTile(Players p) {
-		
-	}
-}
