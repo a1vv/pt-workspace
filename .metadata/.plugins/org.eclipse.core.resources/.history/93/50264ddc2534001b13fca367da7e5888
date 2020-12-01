@@ -31,7 +31,7 @@ public class Game {
 	}
 	
 	// start game
-	private void start() {
+	public void start() {
 		tiles = new Tiles(); //create a new empty board
 		while (true) {
 			char answer = scan.next().charAt(0);
@@ -45,7 +45,7 @@ public class Game {
 		}
 	}
 
-	private void runGame() {
+	public void runGame() {
 		//main game loop
 		while (true) {
 			nextPlayer();
