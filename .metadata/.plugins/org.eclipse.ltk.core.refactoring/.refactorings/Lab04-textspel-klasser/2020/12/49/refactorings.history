@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename method &apos;Game.print(...)&apos; to &apos;println&apos;&#x0D;&#x0A;- Original project: &apos;Lab04-textspel-klasser&apos;&#x0D;&#x0A;- Original element: &apos;Game.print(...)&apos;&#x0D;&#x0A;- Renamed element: &apos;Game.println(...)&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;print&apos;" flags="589826" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;{Game.java[Game~print~QString;" name="println" references="true" stamp="1606818766489" version="1.0"/>
-</session>
