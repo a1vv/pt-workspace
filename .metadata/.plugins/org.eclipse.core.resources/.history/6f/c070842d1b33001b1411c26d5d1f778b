@@ -1,8 +1,0 @@
-import java.util.Scanner;
-
-public class ConnectFour {
-	public static void main(String args[]) {
-		System.out.println("\u2743");
-		System.out.println("\u2623");
-	}
-}
