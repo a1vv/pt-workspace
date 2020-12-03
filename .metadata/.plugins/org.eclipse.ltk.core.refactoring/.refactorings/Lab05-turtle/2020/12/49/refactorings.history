@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;sw&apos; in &apos;Turtle&apos; to &apos;w&apos;&#x0D;&#x0A;- Original project: &apos;Lab05-turtle&apos;&#x0D;&#x0A;- Original element: &apos;Turtle.sw&apos;&#x0D;&#x0A;- Renamed element: &apos;Turtle.w&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;sw&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;{Turtle.java[Turtle^sw" name="w" references="true" setter="false" stamp="1607007370922" textual="false" version="1.0"/>
+</session>

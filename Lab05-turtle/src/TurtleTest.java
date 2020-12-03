@@ -100,7 +100,7 @@ public class TurtleTest {
         }
         int x = t.getX();
         int y = t.getY();
-        reportResult("Har sköldpaddans koordinater god precision?", (x == 670 && y == 120));
+        reportResult("Har sköldpaddans koordinater god precision? test: " + x + " " + y, (x == 670 && y == 120));
     }
 
     /** Testar att jumpTo faktiskt ändrar koordinaterna rätt */

@@ -7,6 +7,7 @@ public class TurtleDrawSquare {
 		t.penDown();
 		for (int i = 0; i < 4; i++) {
 			t.forward(100);
+			SimpleWindow.delay(250);
 			t.left(90);
 		}
 	}
