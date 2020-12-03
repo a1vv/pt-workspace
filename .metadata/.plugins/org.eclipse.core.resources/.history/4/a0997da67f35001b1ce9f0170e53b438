@@ -10,7 +10,7 @@ public class TurtleU5 {
 		t.penDown();
 		for (int i = 0; i < 1000; i++) {
 			t.forward(rand.nextInt(10)+1);
-			SimpleWindow.delay(10);
+			SimpleWindow.delay(1);
 			int ss = rand.nextInt(361)-180;
 			t.left(ss);
 			if(ss == -180) {

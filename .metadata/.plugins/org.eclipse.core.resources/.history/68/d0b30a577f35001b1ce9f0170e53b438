@@ -4,18 +4,14 @@ import se.lth.cs.pt.window.SimpleWindow;
 
 public class TurtleU5 {
 	public static void main(String[] args) {
-		SimpleWindow w = new SimpleWindow(600, 600, "TurtleDraw1000");
+		SimpleWindow w = new SimpleWindow(600, 600, "TurtleDrawRandomFigure");
 		Turtle t = new Turtle(w, 300, 300);
 		Random rand = new Random();
 		t.penDown();
 		for (int i = 0; i < 1000; i++) {
 			t.forward(rand.nextInt(10)+1);
-			SimpleWindow.delay(10);
-			int ss = rand.nextInt(361)-180;
-			t.left(ss);
-			if(ss == -180) {
-				System.out.println(ss);
-			}
+			SimpleWindow.delay(100);
+			t.left(rand.nextInt(361)-180);
 		}
 	}
 }
