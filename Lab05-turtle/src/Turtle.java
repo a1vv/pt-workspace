@@ -36,7 +36,9 @@ public class Turtle {
 		y -= n * Math.sin(Math.toRadians(getDirection()));
 		if( isPenDown ) {
 			w.lineTo((int) Math.round(x), (int) Math.round(y));
-		} 
+		} else {
+			w.moveTo((int) Math.round(x), (int) Math.round(y));
+		}
 		
 	}
 

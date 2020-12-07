@@ -13,9 +13,6 @@ public class TurtleU5 {
 			SimpleWindow.delay(10);
 			int ss = rand.nextInt(361)-180;
 			t.left(ss);
-			if(ss == -180) {
-				System.out.println(ss);
-			}
 		}
 	}
 }
