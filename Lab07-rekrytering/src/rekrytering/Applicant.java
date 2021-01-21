@@ -31,15 +31,28 @@ public class Applicant implements Comparable<Applicant> {
 	}
 
 	public double getAvgGrade() {
-		return 0; 
+		int sum = 0;
+		for(int i = 0 ; i < grades.length ; i++) {
+			sum += grades[i];
+		}
+		double avg = (double)sum/grades.length;
+		return Math.round(avg*100)/100.0; 
 	}
 
-	/*
-	  Implementera denna när labbeskrivningen kräver det 
+
 	  public String toString() {
 	      //Fyll i kod här 
+		  StringBuilder sb = new StringBuilder();
+		  sb.append("[");
+		  for(int g : grades) {
+			  sb.append(g);
+			  sb.append(", ");
+		  }
+		  sb.delete(sb.length()-2,sb.length());
+		  sb.append("]");
+		  return name + sb + "(avg: " + this.getAvgGrade() + ")";
 	  }
-	 */
+
 
 	/*
 	 * Metod för att jämföra detta Applicant-objekt med ett annat och få ut vilket
