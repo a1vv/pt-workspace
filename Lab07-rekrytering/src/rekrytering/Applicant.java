@@ -1,5 +1,7 @@
 package rekrytering;
 
+import java.util.Arrays;
+
 public class Applicant implements Comparable<Applicant> {
 	//Varje sökande har ett namn och ett antal betyg
 	private String name;
@@ -41,16 +43,7 @@ public class Applicant implements Comparable<Applicant> {
 
 
 	  public String toString() {
-	      //Fyll i kod här 
-		  StringBuilder sb = new StringBuilder();
-		  sb.append("[");
-		  for(int g : grades) {
-			  sb.append(g);
-			  sb.append(", ");
-		  }
-		  sb.delete(sb.length()-2,sb.length());
-		  sb.append("]");
-		  return name + sb + "(avg: " + this.getAvgGrade() + ")";
+		  return name + Arrays.toString(grades) + "(avg: " + this.getAvgGrade() + ")";
 	  }
 
 
