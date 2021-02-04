@@ -53,6 +53,8 @@ public class MemoryGame {
 			if(!mb.frontUp(r, c)) {
 				turn(r,c);
 				i++;
+			} else {
+				continue;
 			}
 			if(i == 2) {
 				if(!mb.same(r1, c1, r, c)) {
