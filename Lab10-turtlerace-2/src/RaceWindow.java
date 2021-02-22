@@ -11,7 +11,7 @@ public class RaceWindow extends SimpleWindow {
 		super(800, 400, "Race Window");
 		setUp();
 	}
-	
+	  
 	private void setUp(){
 		super.moveTo(X_START_POS-10, Y_LINE_START+24);
 		super.writeText("1");

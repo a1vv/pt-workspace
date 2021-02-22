@@ -14,7 +14,7 @@ public class DizzyTurtle extends RaceTurtle {
 			angle = -getDirection();
 		}
 		left(angle);
-	}
+	}     
 	
 	public String toString() {
 		return super.toString() + " - DizzyTurtle (Yrsel : " + dizzyness + ")";

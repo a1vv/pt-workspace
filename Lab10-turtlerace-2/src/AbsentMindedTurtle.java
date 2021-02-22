@@ -11,7 +11,7 @@ public class AbsentMindedTurtle extends RaceTurtle {
 		if(rnd.nextInt(100) > degree) {
 			super.raceStep();
 		}
-		
+	
 	}
 	public String toString() {
 		return super.toString() + " - AbsentMindedTurtle (" + degree + "% frånvarande)";

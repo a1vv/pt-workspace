@@ -11,7 +11,7 @@ public class RaceTurtle extends Turtle {
 		penDown();
 		this.left(-90);
 	}
-	
+	   
 	public void raceStep() {
 		forward(rnd.nextInt(6));
 	}

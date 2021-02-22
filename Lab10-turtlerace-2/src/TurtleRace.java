@@ -15,14 +15,14 @@ public class TurtleRace {
 			System.out.println(turtles.get(i));
 		}
 		race();
-	}
+	}  
 	
 	private static void race() {
 		while(!turtles.isEmpty()) {
 			for(int i = 0 ; i < turtles.size() ; i++) {
 				RaceTurtle r = turtles.get(i);
 				r.raceStep();
-				RaceWindow.delay(10);
+				RaceWindow.delay(2);
 				if(r.getX() > RaceWindow.X_END_POS) {
 					finished.add(r);
 					turtles.remove(i);
