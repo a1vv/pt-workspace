@@ -11,6 +11,5 @@
 - [x] Lab 8
 - [x] Lab 9
 - [x] Lab 10
-- [ ] Projekt
-
-TODO: Redovisa projektet
+- [x] Projekt
+all done baby
