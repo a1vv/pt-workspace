@@ -197,7 +197,7 @@ public class BankApplication {
 	}
 	
 	private static void toContinue() {
-		println("Press any key to continue.");
+		println("Press enter to continue.");
 		scan.nextLine();
 	}
 	
